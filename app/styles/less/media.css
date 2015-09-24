@@ -1,0 +1,11 @@
+@media (max-width: 992px) {
+  .user_auth {
+    width: 16%;
+  }
+  .main_menu .main_menu_link {
+    padding: 10px 0px;
+  }
+  .fa-2x {
+    font-size: 1em;
+  }
+}

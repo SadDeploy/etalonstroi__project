@@ -1,0 +1,404 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Эталон Строй</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=600, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/plugins.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+  <body>
+
+
+    <!--[if lt IE 8]>
+      <p class="browsehappy">Вы используете <strong>старую</strong> версию браузера. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите
+          браузер</a> до
+последней версии.</p>
+    <![endif]-->
+
+<!-- modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href=# class="close icon-cancel" data-dismiss="modal" aria-label="Close"></a>
+                <h4 class="modal-title" id="myModalLabel">Пожалуйста,  подтвердите данные</h4>
+            </div>
+            <div class="modal-body">
+                <div class="clearfix">
+                    <div class="col-xs-5 text-right"><p>Ваш регион:</p></div>
+                    <div class="col-xs-3"><p class="text-unic"><b>Москва</b></p></div>
+                    <div class="col-xs-3 text-center"><a href="#" data-toggle="modal" data-target="#myModalCity">Изменить</a></div>
+                </div>
+                <div class="clearfix margbot30">
+                    <div class="col-xs-5 col-xxs-7 text-right"><p>Предпочтительный склад:</p></div>
+                    <div class="col-xs-3 col-xxs-5"><p class="text-unic"><b>пл. Ленина ,10</b></p></div>
+                    <div class="col-xs-3 col-xxs-12 text-center"><a href="#" data-toggle="modal" data-target="#myModalStock">Изменить</a></div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-inverse btn-md">Все верно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal-2 -->
+<div class="modal fade" id="myModalStock" tabindex="-1" role="dialog" aria-labelledby="myModalLabelStock"  data-target=".bs-example-modal-sm">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href=# class="close icon-cancel" data-dismiss="modal" aria-label="Close"></a>
+                <h4 class="modal-title" id="myModalLabelStock">Выберите склад</h4>
+            </div>
+            <div class="modal-body">
+                <div class="clearfix">
+                    <div class="clearfix col-xs-7 center-block">
+                        <div class="col-xs-4 col-xxs-7"><p>Ваш регион:</p></div>
+                        <div class="col-xs-4 col-xxs-5"><p class="text-unic"><b>Москва</b></p></div>
+                        <div class="col-xs-4 col-xxs-12 text-right"><a href="#" data-toggle="modal" data-target="#myModalCity">Изменить</a></div>
+                    </div>
+                    <div class="col-xs-7 form-group center-block margbot30">
+                        <select name="type" class="custom-select">
+                            <option value="1">пл.Ленина, 10</option>
+                            <option value="2">пл.Ленина, 20</option>
+                            <option value="3">пл.Ленина, 30</option>
+                            <option value="4">пл.Ленина, 40</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-md">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal-3 -->
+<div class="modal fade" id="myModalCity" tabindex="-1" role="dialog" aria-labelledby="myModalLabelCity"  data-target=".bs-example-modal-sm">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href=# class="close icon-cancel" data-dismiss="modal" aria-label="Close"></a>
+                <h4 class="modal-title" id="myModalLabelCity">Выберите регион</h4>
+            </div>
+            <div class="modal-body">
+                <div class="clearfix margbot30">
+                    <div class="col-xs-7 form-group center-block">
+                        <select name="type" class="custom-select">
+                            <option value="1">Санкт-Петербург</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Иркутск</option>
+                            <option value="4">Челябинск</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-md">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal -->
+
+    <div class="overflowed">
+
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="visible-sm visible-xs col-xxs-5 col-xs-3 col-sm-3"><a href="/"><img src="images/logo.png" alt="" style="max-height:80px;max-width:100%;" /></a></div>
+                    <div class="toggler col-xs-2 pull-right"><a href="#" class="userbar-toggler"><span><i class="icon-key fa fa-flip-horizontal fa-2x"></i></span></a></div>
+                    <div class="toggler col-xs-1 pull-right"><a href="#" class="search-toggler"><span><i class="fa fa-search fa-2x"></i></span></a></div>
+                    <div class="toggler col-xs-4 pull-right"><a href="#" class="menu-toggler"><span><i class="fa fa-navicon fa-lg"></i> Меню</span></a></div>
+
+                    <div class="logo-place d-inlineb hidden-xs hidden-sm"></div>
+
+                    <div class="nav col-md-7 col-sm-7 d-inlineb v-bottom toggle menu-toggle">
+                        <ul class="navbar list-unstyled font-md">
+                            <li class="navbar_element"><a href="product.html" class="navbar_link underl">Продукция</a></li>
+                            <li class="navbar_element"><a href="#" class="navbar_link underl">Партнерство</a></li>
+                            <li class="navbar_element"><a href="#" class="navbar_link underl">Наши преимущества</a></li>
+                            <li class="navbar_element sub_navbar_elements">
+                                <a href="#" class="navbar_link underl">Покупателям</a>
+                                <ul class="sub_navbar list-unstyled toggle">
+                                    <li class="sub_navbar_element"><a href="#" class="sub_navbar_link">Цены на продукцию</a></li>
+                                    <li class="sub_navbar_element"><a href="#" class="sub_navbar_link">Как заказать</a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar_element"><a href="#" class="navbar_link underl">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="user_auth userbar-toggle col-md-2 col-sm-12 d-inlineb v-bottom text-right toggle">
+                        <p class="auth"><i class="icon-key fa fa-flip-horizontal"></i> <a href="#" class="underl">Вход для диллеров</a></p>
+                        <p class="phone">тел.: <span>(495) 775-59-41</span></p>
+                    </div>
+                    <div class="search_bar margbot5 panel-primary hide search-toggle toggle hidden-md hidden-lg">
+                        <form action="#">
+                            <input placeholder="поиск" class="" type="search">
+                            <button type="submit"><i class="icon-search font-lg"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header><!--header-->
+        <div class="container">
+            <div class="row">
+                <aside class="col-md-3 col-xs-12">
+                    <div class="logo margbot5 panel-primary hidden-sm hidden-xs"><a href="/"><img src="images/logo.png" alt="" class="img-responsive" /></a></div>
+                    <div class="main_menu margbot5 panel-primary">
+                        <ul class="main_menu_block list-unstyled font-md">
+                            <li class="main_menu_element col-md-12 col-xs-3">
+                                <a class="main_menu_link" href="#">
+                                    <i class="icons v-middle text-center">
+                                        <img src="images/sprite_4.png" alt="" class="img-responsive hidden-sm hidden-xs"/>
+                                        <img src="images/msprite_1.png" alt="" class="img-responsive visible-sm visible-xs"/>
+                                    </i>
+                                    <b>Продукция <span>компании</span></b>
+                                    <span class="anima"><span class="triangle"></span></span>
+                                </a>
+                            </li>
+                            <li class="main_menu_element col-md-12 col-xs-3">
+                                <a class="main_menu_link" href="#">
+                                    <i class="icons v-middle text-center">
+                                        <img src="images/sprite_3.png" alt="" class="img-responsive hidden-sm hidden-xs"/>
+                                        <img src="images/msprite_2.png" alt="" class="img-responsive visible-sm visible-xs"/>
+                                    </i>
+                                    <b>Калькуляторы <span>расчетов</span></b>
+                                    <span class="anima"><span class="triangle"></span></span></a>
+                            </li>
+                            <li class="main_menu_element col-md-12 col-xs-3">
+                                <a class="main_menu_link" href="#">
+                                    <i class="icons v-middle text-center">
+                                        <img src="images/sprite_2.png" alt="" class="img-responsive hidden-sm hidden-xs"/>
+                                        <img src="images/msprite_3.png" alt="" class="img-responsive visible-sm visible-xs"/>
+                                    </i>
+                                    <b>Подбор <span>материалов</span></b>
+                                    <span class="anima"><span class="triangle"></span></span>
+                                </a>
+                            </li>
+                            <li class="main_menu_element col-md-12 col-xs-3">
+                                <a class="main_menu_link" href="#">
+                                    <i class="icons v-middle text-center">
+                                        <img src="images/sprite_1.png" alt="" class="img-responsive hidden-sm hidden-xs"/>
+                                        <img src="images/msprite_4.png" alt="" class="img-responsive visible-sm visible-xs"/>
+                                    </i>
+                                    <b>Технические <span>решения</span></b>
+                                    <span class="anima"><span class="triangle"></span></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="shop_bar margbot5 panel-primary">
+                        <div class="panel-content text-center font-md clearfix">
+                            <h3 class="text-center hidden-sm hidden-xs"><i>Интернет-Магазин</i></h3>
+                            <div class="text-left l-center-block col-md-8 margbot20 col-xs-5 col-sm-5">
+                                <ul class="search__prod list-unstyled">
+                                    <li>Ваш регион:
+                                        <div class="select_differ d-inlineb">
+                                            <a href="#" class="selectable"  data-toggle="modal" data-target="#myModalCity">Москва</a>
+                                        </div>
+                                    </li>
+                                    <li>Склад:
+                                        <div class="select_differ d-inlineb">
+                                            <a href="#" class="selectable"  data-toggle="modal" data-target="#myModalStock">пл.Ленина, 10</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="summ__prod text-left l-center-block col-md-8 col-xs-4 col-sm-4">
+                                <p class="margbot0">Товаров: <span class="text-warning">20</span></p>
+                                <p>Сумма: <span class="text-warning">40 580 руб.</span></p>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-12">
+                                <button style="font-weight: 600" class="btn btn-default btn-md ">Оформить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_bar margbot5 panel-primary hidden-sm hidden-xs">
+                        <form action="#">
+                            <input placeholder="поиск" class="" type="search">
+                            <button type="submit"><i class="icon-search font-lg"></i></button>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </aside><!--aside-->
+                <main class="col-md-9 col-sm-12 col-xs-12 d-inlineb">
+                    <div class="main_content">
+                        <h1>&nbsp;</h1>
+                        <div id="basic" class="product_catalog clearfix">
+                            <div class="col-sm-6 col-md-4 col-xs-6 animated item">
+                                <div class="product_list panel-info margbot20">
+                                    <div class="layer_bot">
+                                        <div class="grid_img"><img src="images/main_gal_01.jpg" alt="" class="img-responsive" /></div>
+                                        <div class="panel-content">
+                                            <h3><a href="#">Продукция</a></h3>
+                                            <p>Жилой комплекс расположен в
+                                                одном из самых экологически
+                                                чистых и при этом активно-
+                                                развивающихся районов</p>
+                                        </div>
+                                    </div>
+                                    <div class="layer_mid">
+                                        <div class="smart-object">
+                                            <div class="d-table-cell v-middle panel-content">
+                                                <h3>Продукция</h3>
+                                                <a href="#" class="slideInLeft">Подробнее <i class="icon-right-circled v-middle fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="smart-object-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-xs-6 animated item">
+                                <div class="product_list panel-info margbot20">
+                                    <div class="layer_bot">
+                                        <div class="grid_img"><img src="images/main_gal_02.jpg" alt="" class="img-responsive" /></div>
+                                        <div class="panel-content">
+                                            <h3><a href="#">Калькулятор расчетов</a></h3>
+                                            <p>Жилой комплекс расположен в
+                                                одном из самых экологически
+                                                чистых и при этом активно-
+                                                развивающихся районов</p>
+                                        </div>
+                                    </div>
+                                    <div class="layer_mid">
+                                        <div class="smart-object">
+                                            <div class="d-table-cell v-middle panel-content">
+                                                <h3>Калькулятор расчетов</h3>
+                                                <a href="#" class="slideInLeft">Подробнее <i class="icon-right-circled v-middle fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="smart-object-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-xs-6 animated item">
+                                <div class="product_list panel-info margbot20">
+                                    <div class="layer_bot">
+                                        <div class="grid_img"><img src="images/main_gal_03.jpg" alt="" class="img-responsive" /></div>
+                                        <div class="panel-content">
+                                            <h3><a href="#">Технические решения</a></h3>
+                                            <p>Жилой комплекс расположен в
+                                                одном из самых экологически
+                                                чистых и при этом активно-
+                                                развивающихся районов</p>
+                                        </div>
+                                    </div>
+                                    <div class="layer_mid">
+                                        <div class="smart-object">
+                                            <div class="d-table-cell v-middle panel-content">
+                                                <h3>Технические решения</h3>
+                                                <a href="#" class="slideInLeft">Подробнее <i class="icon-right-circled v-middle fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="smart-object-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-xs-6 animated item">
+                                <div class="product_list panel-info margbot20">
+                                    <div class="layer_bot">
+                                        <div class="grid_img"><img src="images/main_gal_04.jpg" alt="" class="img-responsive" /></div>
+                                        <div class="panel-content">
+                                            <h3><a href="#">Подбор материала для
+                                                ремонта</a></h3>
+                                            <p>Жилой комплекс расположен в
+                                                одном из самых экологически
+                                                чистых и при этом активно</p>
+                                        </div>
+                                    </div>
+                                    <div class="layer_mid">
+                                        <div class="smart-object">
+                                            <div class="d-table-cell v-middle panel-content">
+                                                <h3>Подбор материала для
+                                                    ремонта</h3>
+                                                <a href="#" class="slideInLeft">Подробнее <i class="icon-right-circled v-middle fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="smart-object-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-xs-6 animated item">
+                                <div class="product_list panel-info margbot20">
+                                    <div class="layer_bot">
+                                        <div class="grid_img"><img src="images/main_gal_05.jpg" alt="" class="img-responsive" /></div>
+                                        <div class="panel-content">
+                                            <h3><a href="#">Наши преимущества</a></h3>
+                                            <p>Жилой комплекс расположен в
+                                                одном из самых экологически
+                                                чистых и при этом активно-
+                                                развивающихся районов</p>
+                                        </div>
+                                    </div>
+                                    <div class="layer_mid">
+                                        <div class="smart-object">
+                                            <div class="d-table-cell v-middle panel-content">
+                                                <h3>Наши преимущества</h3>
+                                                <a href="#" class="slideInLeft">Подробнее <i class="icon-right-circled v-middle fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="smart-object-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-xs-6 animated item">
+                                <div class="product_list panel-info margbot20">
+                                    <div class="layer_bot">
+                                        <div class="grid_img"><a href="#"><img src="images/main_gal_06.jpg" alt="" class="img-responsive" /></a></div>
+                                    </div>
+                                    <div class="layer_mid">
+                                        <div class="smart-object">
+                                            <div class="d-table-cell v-middle panel-content">
+                                                <h3>Новинка</h3>
+                                                <a href="#" class="slideInLeft">Подробнее <i class="icon-right-circled v-middle fa-2x"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="smart-object-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--product_catalog-->
+                    </div><!--main_content-->
+                </main><!--main-->
+            </div><!--row-->
+        </div><!--container-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="copy text-left col-xs-4 col-xxs-6"><p>&copy; etalon-stroy.ru, 2015 ЗАО "Эталонстрой"</p></div>
+                    <div class="text-center col-xs-4 col-xxs-6"><a href="#">Карта сайта</a></div>
+                    <div class="logo__footer text-left pull-right font-xs col-xs-4 col-xxs-10">
+                        <img src="images/logo__trinet.png" alt="" class="col-xs-6"/>
+                        <p class="col-xs-6 margbot0 pull-right">Разработка сайтов<br>Продвижение оптимизация (SEO)<br>Реклама в Интернете</p>
+                    </div>
+                </div>
+            </div><!--container-->
+        </footer><!--footer-->
+    </div><!--overflowed-->
+    <!-- build:js scripts/plugin.js -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/masonry.pkgd.min.js"></script>
+    <script src="scripts/selectordie.min.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/jquery.flexslider-min.js"></script>
+    <script src="scripts/jquery.fancybox.pack.js"></script>
+    <!-- endbuild -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

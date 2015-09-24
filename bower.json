@@ -1,0 +1,14 @@
+{
+  "name": "boot",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "jquery": "~1.9.1",
+    "font-awesome": "~4.3.0",
+    "masonry": "~3.3.0",
+    "SelectOrDie": "~0.1.8",
+    "flexslider": "~2.5.0",
+    "fancybox": "~2.1.5"
+  },
+  "devDependencies": {}
+}
