@@ -102,21 +102,6 @@ $(window).load(function () {
         })
     });
 
-    if ($(".item").length) {
-        var masonryItem = function () {
-            $('#basic').masonry({
-                itemSelector: '.item'
-            });
-        };
-        setTimeout(masonryItem, 5000);
-
-        var masonryItemB = function () {
-            $('.begin').masonry({
-                itemSelector: '.item'
-            });
-        };
-        setTimeout(masonryItemB, 0);
-    }
 
 
     // adaptive menu
